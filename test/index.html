@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My Masterpiece For You</title>
+
+    <!-- Fonts: Great Vibes (Header), Inter (Body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Dynamic Mesh Background -->
+    <div class="mesh-background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-trail"></div>
+
+    <!-- Lock Screen (Glass Keypad) -->
+    <section id="lock-screen">
+        <div class="glass-panel lock-panel">
+            <div class="lock-header">
+                <i class="fa-solid fa-heart-lock"></i>
+                <h2>Forever & Always</h2>
+                <p>Enter our special date (DDMM)</p>
+            </div>
+
+            <div class="pin-display">
+                <div class="pin-dot"></div>
+                <div class="pin-dot"></div>
+                <div class="pin-dot"></div>
+                <div class="pin-dot"></div>
+            </div>
+
+            <div class="keypad-grid">
+                <button class="key" data-num="1">1</button>
+                <button class="key" data-num="2">2</button>
+                <button class="key" data-num="3">3</button>
+                <button class="key" data-num="4">4</button>
+                <button class="key" data-num="5">5</button>
+                <button class="key" data-num="6">6</button>
+                <button class="key" data-num="7">7</button>
+                <button class="key" data-num="8">8</button>
+                <button class="key" data-num="9">9</button>
+                <button class="key empty"></button>
+                <button class="key" data-num="0">0</button>
+                <button class="key delete"><i class="fa-solid fa-delete-left"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content (Hidden) -->
+    <main id="main-content">
+
+        <!-- 3D Tilt Container -->
+        <div class="tilt-wrapper" data-tilt data-tilt-max="3" data-tilt-speed="1000" data-tilt-glare
+            data-tilt-max-glare="0.1">
+            <div class="glass-panel main-panel">
+
+                <header class="main-header">
+                    <h1 class="title">My Dearest Love</h1>
+                    <p class="subtitle">Every second with you is magic.</p>
+                </header>
+
+                <!-- Ultimate Gallary -->
+                <div class="swiper gallery-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Add your photos here -->
+                        <div class="swiper-slide">
+                            <img src="7.jpg" alt="Memory">
+                            <div class="reflection"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="6.jpg" alt="Memory">
+                            <div class="reflection"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="5.jpg" alt="Memory">
+                            <div class="reflection"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="4.jpg" alt="Memory">
+                            <div class="reflection"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="3.jpg" alt="Memory">
+                            <div class="reflection"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="love-note">
+                    <p id="typewriter"></p>
+                </div>
+
+                <!-- Secret Gift Section -->
+                <!-- Last Surprise Section -->
+                <div class="final-surprise">
+                    <h3>One Last Surprise... 🎁</h3>
+                    <p>(กดหัวใจเพื่อเอาของขวัญ)</p>
+                    <div class="qr-container" onclick="this.classList.toggle('active')">
+                        <div class="qr-card">
+                            <div class="qr-front">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="qr-back">
+                                <p>For Your Shopping! �</p>
+                                <img src="10.jpg" alt="My Surprise QR"
+                                    onerror="this.src='https://placehold.co/200x200/gold/white?text=QR+Code'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Audio Visualizer -->
+    <div id="visualizer">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Hidden Audio -->
+    <audio id="bg-music" loop>
+        <source src="bg.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla_tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
